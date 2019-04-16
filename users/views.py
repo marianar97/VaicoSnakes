@@ -1,8 +1,8 @@
 from django.shortcuts import render
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
 
-# Create your views here.
-#from django.http import HttpResponse
 
+def login_view(request):
 
-def login(request):
     return render(request, 'users/login.html')

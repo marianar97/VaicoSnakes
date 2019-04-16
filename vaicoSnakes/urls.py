@@ -21,9 +21,9 @@ from users import views as users_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', local_views.home),
-    path('contact/', local_views.contact),
-    path('services/', local_views.services),
-    path('login/',users_views.login)
+    path('', local_views.home, name='home'),
+    path('contact/', local_views.contact, name='contact'),
+    path('services/', local_views.services,name='services'),
+    path('login/',users_views.login_view, name='login')
     #path('home/', views.home)
 ]
