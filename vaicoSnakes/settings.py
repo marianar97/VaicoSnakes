@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'vaicoSnakes.wsgi.application'
 DATABASES = {
    'default' : {
       'ENGINE' : 'djongo',
-      'NAME' : 'vaicoSnakes'
+      'NAME' : 'vaico'
    }
 }
 

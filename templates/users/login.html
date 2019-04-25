@@ -33,7 +33,11 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+
+
+
+				<form class="login100-form validate-form" method="POST" action= "{% url 'login' %}"> 
+					{% csrf_token %}
 					<span class="login100-form-title p-b-34">
 						Account Login
 					</span>
@@ -52,6 +56,9 @@
 							Sign in
 						</button>
 					</div>
+					{% if error %}
+					<p style="color:red;">{{error}}</p>
+					{% endif %}
 
 					<div class="w-full text-center p-t-27 p-b-239">
 						<span class="txt1">

@@ -1,12 +1,10 @@
 from django.db import models
-
-# Create your models here.
 from django.contrib.auth.models import User 
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    business = models.CharField(blank=True,max_length=50)
-    phone_number = models.CharField(max_length=20, blank=True)
+    business = models.CharField(blank=True,max_length=50, null = True)
+    phone_number = models.CharField(max_length=20, blank=True, null=True)
 
     picture = models.ImageField(
         upload_to="static/img/profile_pics", 
